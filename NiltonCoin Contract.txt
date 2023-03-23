@@ -1,0 +1,25 @@
+Generated Smart-Contract:
+
+
+ Here is the Solidity smart contract for NiltonCoin token with the symbol 258ZGZ258 and a total supply of 1,258,000,000,000 tokens:
+
+```
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol";
+
+contract NiltonCoin is ERC20 {
+    constructor() ERC20("NiltonCoin", "258ZGZ258") {
+        _mint(msg.sender, 1258000000000 * 10 ** decimals());
+    }
+}
+```
+
+This smart contract extends the `ERC20` contract from the OpenZeppelin library, which provides a standard implementation for ERC20 tokens. 
+
+The `constructor` function initializes the token with a name of "NiltonCoin" and a symbol of "258ZGZ258". It also mints the total supply of 1,258,000,000,000 tokens to the contract deployer's address.
+
+The `msg.sender` parameter in the `_mint` function refers to the address that deploys the contract. The `decimals()` function returns the number of decimal places used by the token, which is set to 18 by default in the `ERC20` contract.
+
+This smart contract ensures that the total supply of tokens is fixed and cannot be changed once the contract is deployed.
